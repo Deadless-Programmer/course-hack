@@ -5,7 +5,7 @@ import SelectedCards from "./components/SelectedCards/SelectedCards";
 
 function App() {
    const [selectData, setSelectData]=useState([]);
-
+   const [showCredit, setShowCredit] = useState(0);
 
    const handleAddButton =(data)=>{
     const newArray = [...selectData,  data];
@@ -22,10 +22,10 @@ function App() {
       </h1>
       <div className="md:flex justify-between gap-5 mt-10">
         <div className="md:w-2/3 ">
-          <Cards handleAddButton={handleAddButton}></Cards>
+          <Cards handleAddButton={handleAddButton} showCredit={showCredit}></Cards>
         </div>
         <div className="md:w-1/3">
-          <SelectedCards selectData={selectData}></SelectedCards>
+          <SelectedCards showCredit={showCredit} setShowCredit={setShowCredit} selectData={selectData}></SelectedCards>
           {/* {
             selectData.map((datas, idx)=><SelectedCards key={idx} datas={datas}></SelectedCards>)
           } */}

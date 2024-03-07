@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const SelectedCards = ({ selectData }) => {
+const SelectedCards = ({ selectData, showCredit,setShowCredit }) => {
   console.log(selectData);
-  const [showCredit, setShowCredit] = useState(0);
+  // const [showCredit, setShowCredit] = useState(0);
   const [prices, setPrices] = useState(0);
   const [creditHour, setCreditHour] = useState(20);
 
