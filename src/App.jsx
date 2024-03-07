@@ -4,13 +4,13 @@ import Cards from "./components/Cards/Cards";
 import SelectedCards from "./components/SelectedCards/SelectedCards";
 
 function App() {
-   const [select, setSelect]=useState([]);
+   const [selectData, setSelectData]=useState([]);
 
 
-   const handleAddButton =(title,price,credit)=>{
-    const newArray = [...select,  title,price,credit];
-    setSelect(newArray);
-    console.log(select)
+   const handleAddButton =(data)=>{
+    const newArray = [...selectData,  data];
+    setSelectData(newArray);
+    // console.log(select)
    }
 
 
@@ -25,7 +25,10 @@ function App() {
           <Cards handleAddButton={handleAddButton}></Cards>
         </div>
         <div className="md:w-1/3">
-          <SelectedCards select={select}></SelectedCards>
+          <SelectedCards selectData={selectData}></SelectedCards>
+          {/* {
+            selectData.map((datas, idx)=><SelectedCards key={idx} datas={datas}></SelectedCards>)
+          } */}
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@ const Card = ({ data, handleAddButton }) => {
             {credit}
           </p>
         </div>
-        <button onClick={()=>handleAddButton(title,price,credit)} className="bg-orange-600 text-white p-1 rounded-sm font-semibold hover:bg-lime-600">
+        <button onClick={()=>handleAddButton(data)} className="bg-orange-600 text-white p-1 rounded-sm font-semibold hover:bg-lime-600">
           Select
         </button>
       </div>
